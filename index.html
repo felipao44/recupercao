@@ -1,79 +1,244 @@
-/* Importação da fonte Inter do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A GRINHO • COM - Detalhes</title>
+    <!-- Inclui o framework Tailwind CSS para estilização rápida e responsiva -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Importa a fonte 'Inter' do Google Fonts para um design moderno */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-/* Estilos globais para o corpo da página */
-body {
-    font-family: 'Inter', sans-serif; /* Define a fonte principal */
-    background-color: #f0f2f5; /* Fundo cinza claro */
-}
+        /* Estilos globais para o corpo da página */
+        body {
+            font-family: 'Inter', sans-serif; /* Define a fonte principal para todo o corpo */
+            background-color: #f0f2f5; /* Um fundo cinza claro para uma aparência suave */
+            margin: 0; /* Remove a margem padrão do navegador */
+            padding: 0; /* Remove o preenchimento padrão do navegador */
+            display: flex; /* Usa flexbox para centralizar o conteúdo verticalmente */
+            justify-content: center; /* Centraliza o conteúdo horizontalmente */
+            align-items: center; /* Centraliza o conteúdo verticalmente */
+            min-height: 100vh; /* Garante que o corpo ocupe a altura total da viewport */
+            box-sizing: border-box; /* Inclui padding e border na largura/altura do elemento */
+        }
 
-/* Estilos personalizados para o contêiner da tabela para garantir responsividade e boa aparência */
-.table-container {
-    overflow-x: auto; /* Permite rolagem horizontal em telas pequenas */
-    -webkit-overflow-scrolling: touch; /* Rolagem suave em dispositivos iOS */
-}
+        /* Contêiner principal do site, com fundo branco, sombra e bordas arredondadas */
+        .container {
+            background-color: #ffffff; /* Fundo branco */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidade */
+            border-radius: 12px; /* Cantos levemente arredondados */
+            padding: 1.5rem 2rem; /* Preenchimento interno responsivo */
+            width: 95%; /* Ocupa 95% da largura da tela */
+            max-width: 1000px; /* Largura máxima para evitar que fique muito largo em telas grandes */
+            margin: 1rem auto; /* Margem para centralizar e espaçar em telas menores */
+        }
 
-/* Estilos para a tabela */
-table {
-    border-collapse: collapse; /* Colapsa as bordas da tabela */
-    width: 100%; /* Largura total */
-    min-width: 700px; /* Garante que a tabela não fique muito apertada em telas pequenas */
-}
+        /* Estilos para o título principal da página */
+        h1 {
+            font-size: 2.5rem; /* Tamanho da fonte grande */
+            font-weight: 700; /* Peso da fonte negrito */
+            text-align: center; /* Centraliza o texto */
+            margin-bottom: 2rem; /* Margem inferior para espaçamento */
+            color: #1a73e8; /* Cor azul vibrante */
+            padding-bottom: 0.5rem; /* Um pequeno preenchimento na parte inferior */
+            border-bottom: 2px solid #e2e8f0; /* Uma linha inferior sutil */
+        }
 
-/* Estilos para cabeçalhos (th) e células de dados (td) da tabela */
-th, td {
-    border: 1px solid #e2e8f0; /* Cor da borda clara */
-    padding: 1rem; /* Preenchimento interno */
-    text-align: left; /* Alinhamento do texto à esquerda */
-    vertical-align: top; /* Alinha o conteúdo ao topo da célula */
-}
+        /* Contêiner para a tabela, permitindo rolagem horizontal em telas pequenas */
+        .table-container {
+            overflow-x: auto; /* Habilita rolagem horizontal se o conteúdo for muito largo */
+            -webkit-overflow-scrolling: touch; /* Otimiza a rolagem em dispositivos iOS */
+            border-radius: 8px; /* Cantos arredondados para o contêiner da tabela */
+            border: 1px solid #e2e8f0; /* Uma borda sutil ao redor da tabela */
+        }
 
-/* Estilos específicos para os cabeçalhos da tabela */
-th {
-    background-color: #1a73e8; /* Azul Google para o fundo */
-    color: white; /* Cor do texto branca */
-    font-weight: 600; /* Peso da fonte semi-negrito */
-    text-transform: uppercase; /* Texto em maiúsculas */
-}
+        /* Estilos para a tabela */
+        table {
+            border-collapse: collapse; /* Colapsa as bordas das células */
+            width: 100%; /* Largura total */
+            min-width: 768px; /* Largura mínima para a tabela, garantindo legibilidade em tablets */
+        }
 
-/* Estilos específicos para as células de dados da tabela */
-td {
-    background-color: #ffffff; /* Fundo branco */
-    color: #333; /* Cor do texto cinza escuro */
-}
+        /* Estilos para cabeçalhos (th) e células de dados (td) */
+        th, td {
+            border: 1px solid #e2e8f0; /* Bordas claras entre as células */
+            padding: 1.25rem; /* Preenchimento interno das células */
+            text-align: left; /* Alinhamento do texto à esquerda */
+            vertical-align: top; /* Alinha o conteúdo ao topo da célula */
+        }
 
-/* Estilos para linhas pares da tabela */
-tr:nth-child(even) td {
-    background-color: #f8fafd; /* Fundo ligeiramente diferente para linhas pares */
-}
+        /* Estilos específicos para os cabeçalhos da tabela */
+        th {
+            background-color: #1a73e8; /* Azul Google para o fundo do cabeçalho */
+            color: white; /* Cor do texto branca */
+            font-weight: 600; /* Peso da fonte semi-negrito */
+            text-transform: uppercase; /* Texto em maiúsculas */
+            letter-spacing: 0.05em; /* Pequeno espaçamento entre as letras */
+            position: sticky; /* Torna os cabeçalhos fixos ao rolar */
+            top: 0; /* Fixa no topo */
+            z-index: 10; /* Garante que o cabeçalho fique sobre o conteúdo */
+        }
 
-/* Estilos para o efeito de foco (hover) em linhas da tabela */
-tr:hover td {
-    background-color: #e6f0ff; /* Fundo azul claro ao passar o mouse */
-}
+        /* Estilos específicos para as células de dados */
+        td {
+            background-color: #ffffff; /* Fundo branco para as células */
+            color: #333; /* Cor do texto cinza escuro */
+            transition: background-color 0.3s ease; /* Transição suave para o efeito hover */
+        }
 
-/* Estilos para descrições detalhadas dentro das células */
-.detail-item {
-    margin-bottom: 0.75rem; /* Margem inferior para separar os itens */
-}
+        /* Estilos para linhas pares da tabela para alternar cores */
+        tr:nth-child(even) td {
+            background-color: #f8fafd; /* Fundo ligeiramente diferente para linhas pares */
+        }
 
-/* Estilos para o título de cada detalhe */
-.detail-title {
-    font-weight: 600; /* Peso da fonte semi-negrito */
-    color: #4a5568; /* Cor do texto cinza escuro */
-    margin-bottom: 0.25rem; /* Margem inferior para separar do texto da descrição */
-}
+        /* Efeito de foco (hover) em linhas da tabela */
+        tr:hover td {
+            background-color: #e6f0ff; /* Fundo azul claro ao passar o mouse */
+        }
 
-/* Estilos para a descrição principal dos detalhes */
-.detail-description {
-    font-size: 0.875rem; /* Tamanho da fonte pequeno (equivalente a text-sm do Tailwind) */
-    color: #4a5568; /* Cor do texto cinza escuro */
-    line-height: 1.5; /* Altura da linha para melhor leitura */
-}
+        /* Estilos para itens detalhados dentro das células */
+        .detail-item {
+            margin-bottom: 1rem; /* Margem inferior para separar os blocos de detalhes */
+            padding-bottom: 1rem; /* Preenchimento inferior */
+            border-bottom: 1px dashed #e2e8f0; /* Linha tracejada para separar itens */
+        }
+        /* Remove a borda inferior do último item de detalhe */
+        .detail-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
 
-/* Estilos para informações extras/complementares dos detalhes */
-.detail-extra {
-    font-size: 0.75rem; /* Tamanho da fonte extra-pequeno (equivalente a text-xs do Tailwind) */
-    color: #718096; /* Cor do texto cinza mais claro */
-    margin-top: 0.25rem; /* Margem superior para separar da descrição */
-}
+        /* Estilos para o título de cada detalhe */
+        .detail-title {
+            font-weight: 600; /* Peso da fonte semi-negrito */
+            color: #2d3748; /* Cor do texto cinza mais escuro */
+            margin-bottom: 0.4rem; /* Pequena margem inferior */
+            font-size: 1rem; /* Tamanho da fonte padrão */
+        }
+
+        /* Estilos para a descrição principal dos detalhes */
+        .detail-description {
+            font-size: 0.9375rem; /* Tamanho da fonte um pouco maior que text-sm */
+            color: #4a5568; /* Cor do texto cinza médio */
+            line-height: 1.6; /* Altura da linha para melhor leitura */
+        }
+
+        /* Estilos para informações extras/complementares dos detalhes */
+        .detail-extra {
+            font-size: 0.8125rem; /* Tamanho da fonte entre text-xs e text-sm */
+            color: #718096; /* Cor do texto cinza mais claro */
+            margin-top: 0.5rem; /* Margem superior para separar da descrição */
+            font-style: italic; /* Texto em itálico */
+        }
+
+        /* Estilos para telas muito pequenas (celulares em modo retrato) */
+        @media (max-width: 640px) {
+            .container {
+                padding: 1rem; /* Reduz o preenchimento */
+                margin: 0.5rem auto; /* Ajusta a margem */
+            }
+            h1 {
+                font-size: 2rem; /* Reduz o tamanho do título */
+                margin-bottom: 1.5rem;
+            }
+            th, td {
+                padding: 0.8rem; /* Reduz o preenchimento das células */
+                font-size: 0.9rem; /* Reduz o tamanho da fonte das células */
+            }
+            .detail-title {
+                font-size: 0.95rem;
+            }
+            .detail-description {
+                font-size: 0.85rem;
+            }
+            .detail-extra {
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-6 lg:p-8 flex justify-center items-center min-h-screen">
+    <div class="container">
+        <h1>A GRINHO • COM</h1>
+
+        <div class="table-container">
+            <table class="w-full">
+                <thead>
+                    <tr>
+                        <th>Jogo</th>
+                        <th>Mundo</th>
+                        <th>Lugar</th>
+                        <th>Com</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="detail-item">
+                                <p class="detail-title">Canecanaria</p>
+                                <p class="detail-description">Uma planta exótica que prospera em ambientes com alta umidade e temperaturas amenas. Suas folhas largas são conhecidas por suas propriedades medicinais e uso em rituais antigos.</p>
+                                <p class="detail-extra">Detalhe: Encontrada principalmente em florestas tropicais densas, é difícil de cultivar em cativeiro devido às suas necessidades específicas de solo e luz.</p>
+                            </div>
+                            <div class="detail-item">
+                                <p class="detail-title">Fábrica de Antasse</p>
+                                <p class="detail-description">Instalação industrial de ponta dedicada à produção em larga escala de Antasse, um polímero biodegradável inovador. Utiliza tecnologia de purificação avançada para garantir a mais alta qualidade do produto final.</p>
+                                <p class="detail-extra">Foco: Produção sustentável com zero desperdício de resíduos, visando a redução do impacto ambiental.</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="detail-item">
+                                <p class="detail-title">Milho</p>
+                                <p class="detail-description">Variedade rara de milho com grãos de coloração vibrante, alternando entre tons de amarelo intenso e prateado cintilante. Possui um sabor doce e textura crocante.</p>
+                                <p class="detail-extra">Ideal para: Consumo direto, farinhas especiais e óleos gourmet, devido ao seu perfil nutricional único.</p>
+                            </div>
+                            <div class="detail-item">
+                                <p class="detail-title">E um groo</p>
+                                <p class="detail-description">Um tipo de terreno montanhoso e rochoso, caracterizado por formações circulares ou ovais. A vegetação é esparsa, composta principalmente por musgos e líquens adaptados ao clima árido.</p>
+                                <p class="detail-extra">Observação: Popular entre escaladores e geólogos devido à sua geologia peculiar e vistas panorâmicas.</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="detail-item">
+                                <p class="detail-title">Planta Peça</p>
+                                <p class="detail-description">Componente estrutural modular em forma de laje, fabricado com uma liga metálica leve e resistente. Projetado para montagem rápida em construções pré-fabricadas e infraestruturas complexas.</p>
+                                <p class="detail-extra">Material: Liga de titânio e carbono, conferindo alta durabilidade e resistência à corrosão.</p>
+                            </div>
+                            <div class="detail-item">
+                                <p class="detail-title">Câmera Fria</p>
+                                <p class="detail-description">Uma linha de vestuário especializada em agasalhos e cardigãs de alta performance, projetados para manter o corpo aquecido em temperaturas extremas. A tecnologia de isolamento térmico é inspirada em pelagens de animais árticos.</p>
+                                <p class="detail-extra">Aplicações: Perfeita para exploradores polares e entusiastas de esportes de inverno. Possui design ergonômico para maior liberdade de movimento.</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="detail-item">
+                                <p class="detail-title">Com (Farinha)</p>
+                                <p class="detail-description">Variedades de farinha de cereais exóticos, incluindo Farinha de Bija, Farinha Flascia e Farinha Jubakp. Cada uma com características únicas de sabor e textura, ideais para diferentes aplicações culinárias.</p>
+                                <p class="detail-extra">Usos: Bija é ótima para pães crocantes, Flascia para massas leves e Jubakp para espessar molhos e caldos.</p>
+                            </div>
+                            <div class="detail-item">
+                                <p class="detail-title">Trigo Prady</p>
+                                <p class="detail-description">Uma seleção premium de farinha de trigo de alta qualidade, enriquecida com Farinha de Laa, Jarura de Chaper e Feculer. Esta mistura proporciona uma textura macia e um aroma inconfundível aos produtos de panificação.</p>
+                                <p class="detail-extra">Benefícios: Contribui para a elasticidade da massa e um crescimento uniforme em fermentações, ideal para pães artesanais e confeitaria fina.</p>
+                            </div>
+                            <div class="detail-item">
+                                <p class="detail-title">Canecanaria Prady</p>
+                                <p class="detail-description">Coleção de produtos de canecanaria de alta durabilidade, como canecas e recipientes, feitos de materiais orgânicos e sustentáveis. Projetados para uso diário em casa ou no escritório.</p>
+                                <p class="detail-extra">Destaques: Leves, resistentes a impactos e completamente recicláveis. Disponíveis em diversas cores e tamanhos para atender a todas as necessidades.</p>
+                            </div>
+                            <div class="detail-item">
+                                <p class="detail-title">Corte Peça</p>
+                                <p class="detail-description">Processo de corte de componentes e tecidos, incluindo Kende Peça e "manta Peças urada e marar", com foco na precisão e aproveitamento máximo do material. Utiliza tecnologia a laser para cortes limpos e eficientes.</p>
+                                <p class="detail-extra">Finalidade: Produção de peças para vestuário de alta costura e componentes industriais com acabamento impecável.</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Mais linhas podem ser adicionadas aqui seguindo o mesmo padrão -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+
