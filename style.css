@@ -1,0 +1,79 @@
+/* Importação da fonte Inter do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* Estilos globais para o corpo da página */
+body {
+    font-family: 'Inter', sans-serif; /* Define a fonte principal */
+    background-color: #f0f2f5; /* Fundo cinza claro */
+}
+
+/* Estilos personalizados para o contêiner da tabela para garantir responsividade e boa aparência */
+.table-container {
+    overflow-x: auto; /* Permite rolagem horizontal em telas pequenas */
+    -webkit-overflow-scrolling: touch; /* Rolagem suave em dispositivos iOS */
+}
+
+/* Estilos para a tabela */
+table {
+    border-collapse: collapse; /* Colapsa as bordas da tabela */
+    width: 100%; /* Largura total */
+    min-width: 700px; /* Garante que a tabela não fique muito apertada em telas pequenas */
+}
+
+/* Estilos para cabeçalhos (th) e células de dados (td) da tabela */
+th, td {
+    border: 1px solid #e2e8f0; /* Cor da borda clara */
+    padding: 1rem; /* Preenchimento interno */
+    text-align: left; /* Alinhamento do texto à esquerda */
+    vertical-align: top; /* Alinha o conteúdo ao topo da célula */
+}
+
+/* Estilos específicos para os cabeçalhos da tabela */
+th {
+    background-color: #1a73e8; /* Azul Google para o fundo */
+    color: white; /* Cor do texto branca */
+    font-weight: 600; /* Peso da fonte semi-negrito */
+    text-transform: uppercase; /* Texto em maiúsculas */
+}
+
+/* Estilos específicos para as células de dados da tabela */
+td {
+    background-color: #ffffff; /* Fundo branco */
+    color: #333; /* Cor do texto cinza escuro */
+}
+
+/* Estilos para linhas pares da tabela */
+tr:nth-child(even) td {
+    background-color: #f8fafd; /* Fundo ligeiramente diferente para linhas pares */
+}
+
+/* Estilos para o efeito de foco (hover) em linhas da tabela */
+tr:hover td {
+    background-color: #e6f0ff; /* Fundo azul claro ao passar o mouse */
+}
+
+/* Estilos para descrições detalhadas dentro das células */
+.detail-item {
+    margin-bottom: 0.75rem; /* Margem inferior para separar os itens */
+}
+
+/* Estilos para o título de cada detalhe */
+.detail-title {
+    font-weight: 600; /* Peso da fonte semi-negrito */
+    color: #4a5568; /* Cor do texto cinza escuro */
+    margin-bottom: 0.25rem; /* Margem inferior para separar do texto da descrição */
+}
+
+/* Estilos para a descrição principal dos detalhes */
+.detail-description {
+    font-size: 0.875rem; /* Tamanho da fonte pequeno (equivalente a text-sm do Tailwind) */
+    color: #4a5568; /* Cor do texto cinza escuro */
+    line-height: 1.5; /* Altura da linha para melhor leitura */
+}
+
+/* Estilos para informações extras/complementares dos detalhes */
+.detail-extra {
+    font-size: 0.75rem; /* Tamanho da fonte extra-pequeno (equivalente a text-xs do Tailwind) */
+    color: #718096; /* Cor do texto cinza mais claro */
+    margin-top: 0.25rem; /* Margem superior para separar da descrição */
+}
