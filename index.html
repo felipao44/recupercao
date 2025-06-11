@@ -1,83 +1,79 @@
-</head>
-<body class="p-4 sm:p-6 lg:p-8 flex justify-center items-center min-h-screen">
-    <div class="container bg-white shadow-lg rounded-lg p-6 sm:p-8 lg:p-10 w-full max-w-4xl">
-        <h1 class="text-4xl font-bold text-center mb-8 text-blue-800">A GRINHO • COM</h1>
+/* Importação da fonte Inter do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-        <div class="table-container">
-            <table class="w-full">
-                <thead>
-                    <tr>
-                        <th>Jogo</th>
-                        <th>Mundo</th>
-                        <th>Lugar</th>
-                        <th>Com</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <div class="detail-item">
-                                <p class="detail-title">Canecanaria</p>
-                                <p class="detail-description">Uma planta que possui características específicas para o ambiente, adaptando-se a diferentes condições climáticas e de solo.</p>
-                                <p class="detail-extra">É uma planta que se adapta bem a climas quentes e necessita de pouca água para se desenvolver plenamente.</p>
-                            </div>
-                            <div class="detail-item">
-                                <p class="detail-title">Fábrica de Antasse</p>
-                                <p class="detail-description">Instalação industrial dedicada à produção de antasse, um composto utilizado em diversos produtos e processos.</p>
-                                <p class="detail-extra">Foco na eficiência e sustentabilidade na linha de produção.</p>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="detail-item">
-                                <p class="detail-title">Milho</p>
-                                <p class="detail-description">Grão de milho que pode ser encontrado em variedades amarela ou prateada, com diferentes aplicações.</p>
-                                <p class="detail-extra">Ideal para consumo humano e animal, e também como matéria-prima industrial.</p>
-                            </div>
-                            <div class="detail-item">
-                                <p class="detail-title">E um groo</p>
-                                <p class="detail-description">Referência a um tipo de terreno ou ambiente específico, possivelmente com características redondas ou ovais.</p>
-                                <p class="detail-extra">Área com vegetação densa e solo fértil, propícia para o cultivo de certas espécies.</p>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="detail-item">
-                                <p class="detail-title">Planta Peça</p>
-                                <p class="detail-description">Uma laje ou componente de peça e nanta, utilizada em construções ou montagens.</p>
-                                <p class="detail-extra">Material resistente e durável, adequado para diversas aplicações estruturais.</p>
-                            </div>
-                            <div class="detail-item">
-                                <p class="detail-title">Câmera Fria</p>
-                                <p class="detail-description">Uma fabricante de cor cardiganede, especializada em vestuário com design exclusivo.</p>
-                                <p class="detail-extra">Conhecida pela qualidade dos materiais e o estilo único das peças.</p>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="detail-item">
-                                <p class="detail-title">Com (Farinha)</p>
-                                <p class="detail-description">Inclui a farinha de Bija, flascia e Jubakp, utilizada para diversas finalidades culinárias.</p>
-                                <p class="detail-extra">Produtos de alta qualidade para panificação e outras preparações.</p>
-                            </div>
-                            <div class="detail-item">
-                                <p class="detail-title">Trigo Prady</p>
-                                <p class="detail-description">Farinha de trigo de qualidade superior, além de farinha de laa, jarura de chaper e feculer.</p>
-                                <p class="detail-extra">Variedades de farinha para atender a todas as necessidades da cozinha.</p>
-                            </div>
-                            <div class="detail-item">
-                                <p class="detail-title">Canecanaria Prady</p>
-                                <p class="detail-description">Produtos de canecanaria Prady, ideais para o dia a dia.</p>
-                                <p class="detail-extra">Itens práticos e duráveis para sua casa ou negócio.</p>
-                            </div>
-                            <div class="detail-item">
-                                <p class="detail-title">Corte Peça</p>
-                                <p class="detail-description">Inclui Kende Peça e manta Peças urada e marar.</p>
-                                <p class="detail-extra">Componentes e tecidos com corte preciso para diversas utilizações.</p>
-                            </div>
-                        </td>
-                    </tr>
-                    <!-- Adicione mais linhas conforme necessário, seguindo o padrão da imagem -->
-                </tbody>
-            </table>
-        </div>
-    </div>
-</body>
-</html>
+/* Estilos globais para o corpo da página */
+body {
+    font-family: 'Inter', sans-serif; /* Define a fonte principal */
+    background-color: #f0f2f5; /* Fundo cinza claro */
+}
+
+/* Estilos personalizados para o contêiner da tabela para garantir responsividade e boa aparência */
+.table-container {
+    overflow-x: auto; /* Permite rolagem horizontal em telas pequenas */
+    -webkit-overflow-scrolling: touch; /* Rolagem suave em dispositivos iOS */
+}
+
+/* Estilos para a tabela */
+table {
+    border-collapse: collapse; /* Colapsa as bordas da tabela */
+    width: 100%; /* Largura total */
+    min-width: 700px; /* Garante que a tabela não fique muito apertada em telas pequenas */
+}
+
+/* Estilos para cabeçalhos (th) e células de dados (td) da tabela */
+th, td {
+    border: 1px solid #e2e8f0; /* Cor da borda clara */
+    padding: 1rem; /* Preenchimento interno */
+    text-align: left; /* Alinhamento do texto à esquerda */
+    vertical-align: top; /* Alinha o conteúdo ao topo da célula */
+}
+
+/* Estilos específicos para os cabeçalhos da tabela */
+th {
+    background-color: #1a73e8; /* Azul Google para o fundo */
+    color: white; /* Cor do texto branca */
+    font-weight: 600; /* Peso da fonte semi-negrito */
+    text-transform: uppercase; /* Texto em maiúsculas */
+}
+
+/* Estilos específicos para as células de dados da tabela */
+td {
+    background-color: #ffffff; /* Fundo branco */
+    color: #333; /* Cor do texto cinza escuro */
+}
+
+/* Estilos para linhas pares da tabela */
+tr:nth-child(even) td {
+    background-color: #f8fafd; /* Fundo ligeiramente diferente para linhas pares */
+}
+
+/* Estilos para o efeito de foco (hover) em linhas da tabela */
+tr:hover td {
+    background-color: #e6f0ff; /* Fundo azul claro ao passar o mouse */
+}
+
+/* Estilos para descrições detalhadas dentro das células */
+.detail-item {
+    margin-bottom: 0.75rem; /* Margem inferior para separar os itens */
+}
+
+/* Estilos para o título de cada detalhe */
+.detail-title {
+    font-weight: 600; /* Peso da fonte semi-negrito */
+    color: #4a5568; /* Cor do texto cinza escuro */
+    margin-bottom: 0.25rem; /* Margem inferior para separar do texto da descrição */
+}
+
+/* Estilos para a descrição principal dos detalhes */
+.detail-description {
+    font-size: 0.875rem; /* Tamanho da fonte pequeno (equivalente a text-sm do Tailwind) */
+    color: #4a5568; /* Cor do texto cinza escuro */
+    line-height: 1.5; /* Altura da linha para melhor leitura */
+}
+
+/* Estilos para informações extras/complementares dos detalhes */
+.detail-extra {
+    font-size: 0.75rem; /* Tamanho da fonte extra-pequeno (equivalente a text-xs do Tailwind) */
+    color: #718096; /* Cor do texto cinza mais claro */
+    margin-top: 0.25rem; /* Margem superior para separar da descrição */
+}
